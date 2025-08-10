@@ -3,18 +3,27 @@
 
 /* ----- VARIABLES ----- */
 :root{
-    --body-color: rgb(250, 250, 250);
-    --color-white: rgb(255, 255, 255);
+    --body-color: rgb(255, 250, 245); /* updated vibrant color */
+ 
+    --color-white: rgb(255, 255, 255); /* updated vibrant color */
+   
 
-    --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171);
+    --text-color-second: rgb(34, 34, 34); /* updated vibrant color */
+   
+    --text-color-third: rgb(255, 94, 0); /* updated vibrant color */
+    
 
-    --first-color: rgb(110, 87, 224);
-    --first-color-hover: rgb(40, 91, 212);
+    --first-color: rgb(255, 0, 128); /* updated vibrant color */
+   
+    --first-color-hover: rgb(255, 20, 147); /* updated vibrant color */
+   
 
-    --second-color: rgb(0, 201, 255);
-    --third-color: rgb(192, 166, 49);
-    --first-shadow-color: rgba(0, 0, 0, 0.1);
+    --second-color: rgb(0, 191, 255); /* updated vibrant color */
+   
+    --third-color: rgb(255, 165, 0); /* updated vibrant color */
+   
+    --first-shadow-color: rgba(0, 0, 0, 0.15); /* updated vibrant color */
+   
 
 }
 
@@ -31,72 +40,77 @@ html{
     scroll-behavior: smooth;
 }
 
-/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-::-webkit-scrollbar{
+/* ----- VIBRANT SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar {
     width: 10px;
-    border-radius: 25px;
-}
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb{
-    background: #ccc;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-thumb:hover{
-    background: #bbb;
-}
-
-
-/* ---##-- REUSABLE CSS --##--- */
-
-/* ----- GLOBAL BUTTON DESIGN ----- */
-.btn{
-    font-weight: 500;
-    padding: 12px 20px;
-    background: #efefef;
-    border: none;
     border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffe6f0; /* soft pink background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff0080, #ff8c00); /* hot pink to orange */
+    border-radius: 10px;
+    border: 2px solid #fff; /* white border for depth */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff1493, #ffa500); /* deeper hover tones */
+}
+
+
+/* ----- VIBRANT GLOBAL BUTTON DESIGN ----- */
+.btn {
+    font-weight: 600;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff0080, #ff8c00); /* hot pink to orange */
+    color: white;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    transition: .4s;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); /* soft pink glow */
 }
-.btn>i{
-    margin-left: 10px;
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff1493, #ffa500); /* deeper shades */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4); /* more intense glow */
 }
-.btn:hover{
-    background: var(--second-color);
-    color: var(--color-white);
-}
+
 
 /* ----- GLOBAL ICONS DESIGN ----- */
 i{
     font-size: 16px;
 }
 
-/* ------- BASE -------- */
-body{
-    background: var(--body-color);
-    
+body {
+    background: linear-gradient(135deg, #fff0f5, #fdf5ff); /* soft pink to lavender */
 }
+
 .container{
     width: 100%;
     position: relative;
 }
 
 /* ----- NAVIGATION BAR ----- */
-nav{
+nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 90px;
     line-height: 90px;
-    background: var(--body-color);
-    background-color: #999;
+    background: linear-gradient(135deg, #ff0080, #ff8c00); /* hot pink to orange */
     padding-inline: 9vw;
-    transition: .3s;
+    transition: 0.3s;
     z-index: 100;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); /* soft glow */
 }
+
+
 .nav-logo{
    position: relative;
 }
@@ -104,7 +118,7 @@ nav{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-third);
-    color: rgb(3, 7, 226);
+    color: rgb(119, 0, 60);
 }
 .nav-logo span{
     position: absolute;
@@ -639,3 +653,59 @@ footer{
         width: 100%;
     }
 }
+
+/* ----- MEDIA QUERY == 400px / EXTRA SMALL DEVICES ----- */
+@media only screen and (max-width: 400px) {
+  .featured-name {
+    font-size: 30px;
+  }
+
+  .featured-text-info {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .image, .image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav {
+    height: 70px;
+    line-height: 70px;
+    padding-inline: 5vw;
+  }
+
+  .nav-name {
+    font-size: 20px;
+  }
+
+  .scroll-btn {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .top-footer p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .footer_menu_list a {
+    margin-inline: 10px;
+    font-size: 14px;
+  }
+
+  .footer-social-icons {
+    gap: 15px;
+  }
+}
+a {
+    color: inherit;         /* Takes the color from the parent element */
+    text-decoration: none;  /* Removes underline */
+  }
+  
