@@ -37,7 +37,7 @@ function myMenuFunction(){
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
-    backDelay : 2000
+    backDelay : 1000
  })
 
 
@@ -45,7 +45,7 @@ function myMenuFunction(){
  const sr = ScrollReveal({
         origin: 'top',
         distance: '80px',
-        duration: 2000,
+        duration: 1000,
         reset: true     
  })
 
@@ -70,23 +70,23 @@ sr.reveal('.top-header',{})
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',
-  duration: 2000,
+  duration: 1000,
   reset: true
 })
 
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
+srLeft.reveal('.about-info',{delay: 10})
+srLeft.reveal('.contact-info',{delay: 10})
 
 /* -- ABOUT SKILLS & FORM BOX -- */
 const srRight = ScrollReveal({
   origin: 'right',
   distance: '80px',
-  duration: 2000,
+  duration: 1000,
   reset: true
 })
 
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
+srRight.reveal('.skills-box',{delay: 10})
+srRight.reveal('.form-control',{delay: 10})
 
 
 
